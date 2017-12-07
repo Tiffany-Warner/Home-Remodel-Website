@@ -1,0 +1,27 @@
+/*#homeNav {*/
+/*    background-color: #212529;*/
+/*}*/
+/*#homeNav > .navbar-toggler {*/
+/*    font-size: 12px;*/
+/*    right: 0;*/
+/*    padding: 13px;*/
+/*    text-transform: uppercase;*/
+/*    color: white;*/
+/*    border: 0;*/
+/*    background-color: red;*/
+/*}*/
+/* #homeNav > .navbar-default .navbar-brand {*/
+/*    color: #558755;*/
+/*}*/
+
+.opaque-navbar {
+    background-color: rgba(0,0,0,0.5);
+    height: 60px;
+    border-bottom: 0px;
+    transition: background-color .5s ease 0s;
+}
+.opaque-navbar.opaque {
+    background-color: black;
+    height: 60px;
+    transition: background-color .5s ease 0s;
+}
