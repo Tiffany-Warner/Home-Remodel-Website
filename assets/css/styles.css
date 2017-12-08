@@ -163,30 +163,13 @@ a:hover{
 /********************************************************************
 *                           Content Styles
 ********************************************************************/
-.parallax-img1, .parallax-img2{
-    position: relative;
-    opacity: 0.80;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /*Crucial for parallax effect*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
-
-.parallax-img1{
-    background-image: url('../imgs/testImg.jpg');
-    min-height: 400px;
-}
-.parallax-img2{
-    background-image: url('../imgs/test2Img.jpeg');
-    min-height: 400px;
-}
-
 .section{
     text-align: center;
     padding: 50px 80px;
+}
+.row{
+    text-align: center;
+    align-content: center;
 }
 
 .section-light{
@@ -231,7 +214,7 @@ a:hover{
 }
 /*Remove parallax for mobile devices*/
 @media(max-width: 568px){
-    .parallax-img1, .parallax-img2, .intro{
+    .intro{
         background-attachment: scroll;
     }
     .first-heading{
@@ -240,4 +223,46 @@ a:hover{
     .second-heading{
         font-size: 50px;
     }
+}
+/********************************************************************
+*                           Services Styles
+********************************************************************/
+.services >.row > div{
+    padding: 10px;
+}
+.bathroom, .kitchen, .addition, .deck{
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 200px;
+}
+.new-construction{
+    background-image: url('../imgs/cabin.png');
+}
+.bathroom{
+    background-image: url('../imgs/bathroom.jpg');
+}
+.kitchen{
+    background-image: url('../imgs/kitchen.jpg');
+}
+.addition{
+    background-image: url('../imgs/addition.JPG');
+}
+.deck{
+    background-image: url('../imgs/wood.jpeg');
+}
+.transparent{
+    background-color: rgba(0,0,0,0.5);
+}
+ul > li{
+    padding: 5px;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+ul{
+    list-style: none;
 }
