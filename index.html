@@ -11,9 +11,8 @@
     <title>R & J Construction</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,700i|Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,700i|Lato:300,400,700|Montserrat:700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
 </head>
 <body id="pageTop">
     
@@ -21,7 +20,6 @@
     <!-- Navbar -->
     <!--========-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top opaque-navbar navbar-style">
-      <div class="container">
           <a class="navbar-brand" href="#pageTop"><span id="brand">R & J <span class="no-font-style">Construction</span></span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -39,6 +37,9 @@
                   <a class="nav-link" href="#">Gallery</a>
               </li>
               <li class="nav-item">
+                  <a class="nav-link" href="#">Testimonials</a>
+              </li>
+              <li class="nav-item">
                   <a class="nav-link" href="#">Contact Us</a>
               </li>
               <li class="nav-item">
@@ -46,7 +47,6 @@
               </li>
           </ul>
           </div>
-      </div>
     </nav>
 
     <!--========-->
@@ -58,10 +58,13 @@
                 <div class="col-md-12 col-sm-12 header-text">
                     <h3 class="bounceIn first-heading">Some Text Here that Bounces in</h3>
                     <h1 class="fadeIn second-heading">Some More Text that Fades In</h1>
-                    <div class="quote">
-                         <a href="#" class="quote-link">Request an Estimate</a>
+                    <div class="estimate-button">
+                         <a href="#" class="estimate">Request an Estimate</a>
                     </div>
                 </div>
+            </div>
+            <div class="arrow bounce">
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
         </div>
     </header>
@@ -70,19 +73,21 @@
     <!-- Services-->
     <!--========-->
     <section class="section section-light services">
-        <h2>Remodeling Services</h2>
+        <div class="col-lg-12 section-heading">
+            <h2>Remodeling Services</h2>
+        </div>
         <div class="row">
             <div class="col-lg-6 col-md-12">
                 <div class="bathroom">
                     <div class="img-text">
-                        <span class="border transparent"> Bathrooms</span>
+                        <span class="border transparent centered"> Bathrooms</span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="kitchen">
                     <div class="img-text">
-                        <span class="border transparent"> Kitchens</span>
+                        <span class="border transparent centered"> Kitchens</span>
                     </div>
                 </div>
             </div>
@@ -91,14 +96,14 @@
             <div class="col-lg-6 col-md-12">
                 <div class="addition">
                     <div class="img-text">
-                        <span class="border transparent"> Home Additions</span>
+                        <span class="border transparent centered"> Home Additions</span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="deck">
                     <div class="img-text">
-                        <span class="border transparent"> Decks</span>
+                        <span class="border transparent centered"> Decks</span>
                     </div>
                 </div>
             </div>
@@ -106,16 +111,6 @@
                 <h1>And More!</h1>
             </div>
         </div>
-
-        <!--<div class="row">-->
-        <!--<div class="col-md-6 col-sm-4">-->
-        <!--<p><span>Animi asperiores atque corporis cum dignissimos ea eveniet fugiat nihil non porro quas, recusandae veritatis? Ad aperiam, corporis cumque dignissimos dolorum esse id modi nemo odio odit placeat quasi vel!</span><span>Aut debitis harum in ipsum perferendis provident quaerat quasi rerum soluta tempora? Architecto nisi omnis veritatis? Accusamus excepturi fuga in, iste, iure laudantium magnam mollitia praesentium quos sint sit tenetur!</span><span>A accusantium dolore ducimus eaque eligendi enim error explicabo, harum hic in ipsa maiores minus molestiae nesciunt nihil nisi porro quis quisquam rem rerum sapiente sequi vel veritatis, vero voluptas.</span><span>Ab alias amet atque autem blanditiis consectetur dignissimos distinctio dolorem ducimus error esse eum hic maxime minus mollitia nam perferendis placeat quae quaerat quis quod repellendus rerum sequi, sit tempore!</span></p>-->
-        <!--</div>-->
-        <!--<div class="col-md-6 col-sm-4 about">-->
-        <!--<div class="img-text">-->
-        <!--<span class="border"> Best Company Ever</span>-->
-        <!--</div>-->
-        <!--</div>-->
     </section>
 
     <!--========-->
@@ -142,15 +137,28 @@
     <!-- About  -->
     <!--========-->
     <section class="section section-light">
-        <h2>About Us</h2>
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-12 ">
-                <p><span>Animi asperiores atque corporis cum dignissimos ea eveniet fugiat nihil non porro quas, recusandae veritatis? Ad aperiam, corporis cumque dignissimos dolorum esse id modi nemo odio odit placeat quasi vel!</span><span>Aut debitis harum in ipsum perferendis provident quaerat quasi rerum soluta tempora? Architecto nisi omnis veritatis? Accusamus excepturi fuga in, iste, iure laudantium magnam mollitia praesentium quos sint sit tenetur!</span><span>A accusantium dolore ducimus eaque eligendi enim error explicabo, harum hic in ipsa maiores minus molestiae nesciunt nihil nisi porro quis quisquam rem rerum sapiente sequi vel veritatis, vero voluptas.</span><span>Ab alias amet atque autem blanditiis consectetur dignissimos distinctio dolorem ducimus error esse eum hic maxime minus mollitia nam perferendis placeat quae quaerat quis quod repellendus rerum sequi, sit tempore!</span></p>
+        <div class="col-lg-12 section-heading">
+            <h2>About Us</h2>
+        </div>
+        <div class="row about">
+            <div class="col-lg-8 col-md-12">
+                <div class="bio">
+                    <h3 class="bioHeader">Experience you can trust</h3>
+                    <p>R And J Construction is a locally-owned remodeling company that services Flagstaff, AZ and surrounding areas</p>
+                    <p>With over 25 years of experience as a general contractor
+                        and having built over 200 homes, you can rest assured you are in expert hands.</p>
+                    <p>Our remodeling
+                        services are top quality and done right everytime.
+                    </p>
+                    <h3 class="bioHeader">We Care</h3>
+                    <p>We know how important your home is to you.</p>
+                    <p> Your satisfaction is top priority.</p>
+                    <p>Just <a href="#">take a look</a> at what our customers have to say about us.</p>
+                </div>
             </div>
-            <div class="col-lg-6 col-md-12 about">
+            <div class="col-lg-4 col-md-12">
                 <div class="img-text">
-                    <span class="border"> Best Company Ever</span>
+                    <span class="border centered slogan"> Best Company Ever</span>
                 </div>
             </div>
         </div>
@@ -158,6 +166,43 @@
     <!--==========-->
     <!-- Gallery  -->
     <!--==========-->
+    <section class="section gallery">
+        <div class="col-lg-12 section-heading">
+            <h2>See Our Work</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="gallery-thumbnail col-lg-4 col-md-6">
+                <figure>
+                    <img src="assets/imgs/addition2.JPG" alt="Room addition"/>
+                    <figcaption class="centered hide">
+                        <a href="#">See More</a>
+                    </figcaption>
+                </figure>
+                <!--<div class="centered img-text hide"> Title here-->
+                <!--<p> text here </p></div>-->
+            </div>
+
+            <div class="gallery-thumbnail col-lg-4 col-md-6">
+                <figure>
+                    <img src="assets/imgs/bathroom2.jpg" alt="Bathroom remodel"/>
+                    <figcaption class="centered hide">
+                        <a href="#">See More</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="gallery-thumbnail col-lg-4 col-md-6">
+                <figure>
+                    <img src="assets/imgs/sandstone.jpg" alt="SandStone House Living area"/>
+                    <figcaption class="centered hide">
+                        <a href="#">See More</a>
+                    </figcaption>
+                </figure>
+                <!--<div class="centered img-text hide"> Title here-->
+                <!--<p> text here </p></div>-->
+            </div>
+        </div>
+    </section>
 
 
     <!--==========-->
@@ -166,34 +211,38 @@
     <section class="section section-light contact">
         <div class="container">
             <h1 id="brand"><span>R and J Construction LLC</span> | Contact Us</h1>
-            <div class="wrapper animated bounceInLeft">
-                <div class="company-info">
+            <div class="row wrapper animated bounceInLeft">
+                <div class="company-info col-sm-12 col-md-4">
                     <h3>R and J Construction</h3>
                     <ul>
-                        <li><i class="fa fa-road" aria-hidden="true"></i> 123 Address St.</li>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> 123 Address St.</li>
                         <li><i class="fa fa-phone" aria-hidden="true"></i> 123-456-7890</li>
                         <li><i class="fa fa-envelope" aria-hidden="true"></i> myemail@email.com</li>
                     </ul>
                 </div>
-                <div class="contact-form">
+                <div class="container-fluid contact-form col-sm-12 col-md-8">
                     <form>
-                        <p>
-                            <label> Name</label>
-                            <input type="text" name="name">
-                        </p>
-                        <p>
-                            <label> Company(Optional)</label>
-                            <input type="text" name="company">
-                        </p>
-                        <p>
-                            <label> Email Address</label>
-                            <input type="text" name="email">
-                        </p>
-                        <p>
-                            <label> Phone Number</label>
-                            <input type="text" name="phone">
-                        </p>
-                        <p class="full">
+                        <div class="row">
+                            <p class="col-sm-12 col-lg-6">
+                                <label> Name</label>
+                                <input type="text" name="name">
+                            </p>
+                            <p class="col-sm-12 col-lg-6">
+                                <label> Company(Optional)</label>
+                                <input type="text" name="company">
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p class="col-sm-12 col-lg-6">
+                                <label> Email Address</label>
+                                <input type="text" name="email">
+                            </p>
+                            <p class="col-sm-12 col-lg-6">
+                                <label> Phone Number</label>
+                                <input type="text" name="phone">
+                            </p>
+                        </div>
+                        <p class="full col-sm-12">
                             <label> How can we help you?</label>
                             <textarea name=message" rows="5"></textarea>
                         </p>
@@ -207,6 +256,13 @@
             </div>
         </div>
     </section>
+
+    <section class="section section-dark">
+        <div class="container">
+            Text
+        </div>
+
+    </section>
     <!--jQuery-->
     <script src="assets/js/lib/jquery-3.2.1.min.js"></script>
     <!--Popper-->
@@ -217,6 +273,7 @@
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
     <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/gallery.js"></script>
     <footer>
         <p>Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 R and J Construction LLC | All Rights Reserved | Website Designed and Created by Tiffany Warner</p>
     </footer>

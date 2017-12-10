@@ -7,16 +7,37 @@
 body, html{
     height: 100%;
     margin: 0;
+    font-family: 'Lato', sans-serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.8em;
     color: #333;
 }
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 a:hover{
     color: inherit;
     text-decoration: none;
 }
-
+.img-text{
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hide{
+    display: none;
+}
 /********************************************************************
 *                           Navbar Styles
 ********************************************************************/
@@ -60,12 +81,22 @@ a:hover{
         display: none;
     }
 }
+/*Fix Navbar Responsiveness*/
+@media (max-width: 1110px){
+    .navbar-style {
+        font-size: 12px;
+    }
+    .navbar-brand #brand{
+        font-size: 20px;
+    }
+}
 #brand {
     color: #78c475;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-style: italic;
     font-size: 30px;
+    padding-left: 30px;
 }
 #brand .no-font-style{
     font-style: normal;
@@ -96,32 +127,43 @@ a:hover{
 }
 .header-text {
     padding-top: 300px;
-    padding-bottom: 200px;
+    padding-bottom: 150px;
 }
 @media screen and (max-width: 768px) {
     .header-text {
         padding-top: 150px;
         padding-bottom: 100px;
     }
+    .first-heading{
+        font-size: 20px;
+    }
+    .second-heading{
+        font-size: 30px;
+    }
 }
-.quote{
+.estimate-button{
     padding: 30px 0;
 }
-.quote-link{
+.estimate{
     border: 3px double white;
+    border-radius: 20px;
     padding: 15px 30px;
     color: white;
+    text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
-.quote-link:hover, quote-link:focus{
+.estimate:hover, .estimate:focus{
     background-color: white;
     color: black;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
-
-/*Header Text-animations*/
+/***********************************************************
+*                 Header Text-animations
+* The following animations are variations of animations
+* available from https://github.com/daneden/animate.css
+***********************************************************/
 .bounceIn {
     animation-name: bounceIn;
     animation-duration: 1.4s;
@@ -134,6 +176,7 @@ a:hover{
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
+
 @keyframes bounceIn {
     0% {
         opacity: 0;
@@ -163,12 +206,56 @@ a:hover{
         opacity: 1;
     }
 }
+
+.bounce {
+    animation-name: bounce;
+    transform-origin: center bottom;
+}
+
+
+@keyframes bounce {
+    from, 20%, 53%, 80%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transform: translate3d(0,0,0);
+    }
+
+    40%, 43% {
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transform: translate3d(0, -15px, 0);
+    }
+
+    70% {
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transform: translate3d(0, -8px, 0);
+    }
+
+    90% {
+        transform: translate3d(0,-4px,0);
+    }
+}
+
+.arrow{
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    bottom: 0;
+    display: block;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    position: absolute;
+    width: 50px;
+}
+.arrow i{
+    font-size: 20px;
+}
 /********************************************************************
 *                           Content Styles
 ********************************************************************/
 .section{
     text-align: center;
     padding: 50px 80px;
+    font-size: 20px;
 }
 .row{
     text-align: center;
@@ -192,51 +279,26 @@ a:hover{
 .row > div > p{
     padding: 15px 20px;
 }
-.about{
-    background-image: url('../imgs/plans.jpeg');
-}
-.img-text{
-    position: absolute;
-    top: 50%; /*Bring down to center*/
-    width: 100%;
-    text-align: center;
-    color: #000;
-    font-size: 27px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-}
-.border{
-    background-color: #111;
-    color: white;
-    padding: 20px;
-}
-/*Remove parallax for mobile devices*/
-@media(max-width: 568px){
-    .intro{
-        background-attachment: scroll;
-    }
-    .img-text{
-        font-size: 15px;
-    }
-    .border{
-        padding: 8px;
-    }
-}
-@media only screen and (min-width : 568px) and (max-width : 1024px){
-    .img-text{
-        font-size: 20px;
-    }
-    .border{
-        padding: 15px;
-    }
-}
 
-/********************************************************************
-*                           Stats Styles
-********************************************************************/
-.stats{
-    font-size: 30px;
-    font-family: 'Playfair Display', serif;
+.section-heading h2{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 34px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+.section-heading h2::before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 50px;
+    margin-left: -25px;
+    height: 5px;
+    left: 50%;
+    background: #78c475;;
 }
 /********************************************************************
 *                           Services Styles
@@ -263,13 +325,104 @@ a:hover{
     background-image: url('../imgs/kitchen.jpg');
 }
 .addition{
-    background-image: url('../imgs/addition.JPG');
+    background-image: url('../imgs/addition.jpg');
 }
 .deck{
     background-image: url('../imgs/wood.jpeg');
 }
 .transparent{
     background-color: rgba(0,0,0,0.5);
+}
+
+/********************************************************************
+*                           Stats Styles
+********************************************************************/
+.stats{
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+/********************************************************************
+*                           About Styles
+********************************************************************/
+.about{
+    background-image: url('../imgs/plans.jpeg');
+    background-size: cover;
+}
+.border{
+    background-color: #111;
+    color: white;
+    padding: 20px;
+}
+.bio {
+    background-color: #222;
+    color: white;
+    margin: 30px;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+}
+.bioHeader{
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 4px;
+    color: #78c475;
+}
+/*Hide slogan on smaller devices*/
+@media(max-width: 568px){
+    .slogan{
+        display: none;
+    }
+}
+@media only screen and (min-width : 568px) and (max-width : 1024px){
+    .slogan{
+        display: none;
+    }
+}
+
+/********************************************************************
+*                           Gallery Styles
+********************************************************************/
+.gallery{
+    text-align: center;
+}
+.gallery-thumbnail{
+    min-width: 250px;
+    max-width: 400px;
+    margin: 10px;
+    padding: 0;
+    box-shadow:-3px 5px 15px #000;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition-duration: 200ms;
+}
+.gallery-thumbnail img {
+    width: 100%;
+    height: 250px;
+    margin: 0;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition-duration:300ms;
+}
+.gallery-thumbnail figure {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background-color: #292929;
+    margin: 0;
+}
+.gallery-thumbnail figcaption a{
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 10px 15px;
+    margin: 7px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.gallery-thumbnail figcaption a:hover, .gallery-thumbnail figcaption a:focus{
+    background-color: rgba(120, 196, 117, 0.5);
 }
 
 /********************************************************************
@@ -303,6 +456,7 @@ a:hover{
     font-weight: 300;
     font-style: normal;
 }
+
 .contact .container #brand span{
     font-weight: 700;
 }
@@ -311,6 +465,7 @@ a:hover{
     box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
     text-align: left;
 }
+
 .wrapper > *{
     padding: 1em;
 }
@@ -328,22 +483,8 @@ a:hover{
     background: #f9feff;
 }
 
-.contact-form form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap:20px;
-}
-
-.contact-form form label{
-    display: block;
-}
-
-.contact-form form p{
+.contact-form form div p{
     margin: 0;
-}
-
-.contact-form form .full{
-    grid-column: 1 / 3;
 }
 
 .contact-form form button, .contact-form form input,
@@ -367,14 +508,7 @@ a:hover{
 }
 
 /*For large screens*/
-@media(min-width: 700px){
-    .wrapper{
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-    }
-    .wrapper > *{
-        padding: 2.5em;
-    }
+@media(min-width: 768px){
     .company-info h3, .company-info ul{
         text-align: left;
     }
