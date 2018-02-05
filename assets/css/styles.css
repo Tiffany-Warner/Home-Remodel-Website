@@ -316,6 +316,7 @@ a:hover{
     background-size: cover;
     min-height: 300px;
 }
+
 .services .row div a div div span:hover{
     color: black;
     background-color: white;
@@ -346,7 +347,7 @@ a:hover{
     transform: scale(1.1);
 }
 .contact-button{
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .services-contact{
     padding: 10px 8px;
@@ -358,6 +359,18 @@ a:hover{
 .services-contact:hover, .services-contact:focus{
     background-color: #65b95d;
     transition: 0.3s;
+}
+.services-link a{
+    color: black;
+    font-size: 30px;
+    border: 3px double black;
+    padding: 10px;
+    transition-duration: 0.3s;
+}
+.services-link a:hover, .services-link a:focus{
+    background-color: rgb(12, 12, 12);
+    color: white;
+    transition-duration: 0.3s;
 }
 /********************************************************************
 *                           Stats Styles
@@ -474,9 +487,34 @@ a:hover{
 .gallery-thumbnail figcaption a:hover, .gallery-thumbnail figcaption a:focus{
     background-color: rgba(120, 196, 117, 0.5);
 }
+
+.gallery-page-thumbnail figure {
+    /*position: relative;*/
+    /*display: block;*/
+    background-color: #292929;
+}
+
+.gallery-page-thumbnail{
+    min-width: 250px;
+    max-width: 400px;
+    box-shadow:-3px 5px 15px #000;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+.gallery-page-thumbnail img {
+    width: 100%;
+    height: 250px;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition-duration:300ms;
+}
 /********************************************************************
 *                           Review Styles
 ********************************************************************/
+.review{
+    margin:
+}
 .reviews .row div p{
     font-style: italic;
     line-height: 1.6em;
@@ -515,12 +553,12 @@ a:hover{
     padding: 1em;
     font-size: 18px;
 }
-.contact > .container{
+/* .contact > .container{
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
-}
+} */
 
 .company-info > ul{
     list-style: none;
@@ -528,7 +566,7 @@ a:hover{
 }
 
 .contact .container #brand{
-    color: white;
+    color: #485e74;
     font-family: Lato, sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -550,13 +588,14 @@ a:hover{
 .company-info{
     background-color: #c5f4c3;
     text-align: center;
+    margin: 0 auto;
 }
 
 .company-info h3, .company-info ul{
     margin: 0 0 1rem 0;
 }
 
-.contact-form{
+/* .contact-form{
     background: #f9feff;
 }
 
@@ -582,15 +621,29 @@ a:hover{
     color: white;
     outline: none;
     transition: background-color 0.5s ease-out;
-}
+} */
 
-/*For large screens*/
+/* For large screens
 @media(min-width: 768px){
     .company-info h3, .company-info ul{
         text-align: left;
     }
-}
+} */
 
+.bottom-section div div p{
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 5px;
+}
+.email{
+    text-transform: none;
+    color: white;
+}
+.bottom-section{
+    padding: 20px;
+}
 footer{
     text-align: center;
     font-size: 10px;
