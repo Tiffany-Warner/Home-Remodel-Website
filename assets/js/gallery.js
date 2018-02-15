@@ -1,6 +1,6 @@
 $(".gallery-thumbnail figure").hover(function(){
     //mouse enter handler
-        $(this).find("img").css("opacity", "0.2");
+        $(this).find("img").css("opacity", "0.5");
         console.log($(this));
         $(this).find("figcaption").removeClass("hide");
     },

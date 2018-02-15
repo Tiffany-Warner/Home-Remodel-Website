@@ -471,7 +471,7 @@ a:hover{
     position: relative;
     display: block;
     overflow: hidden;
-    background-color: #292929;
+    background-color: #cecaca;
     margin: 0;
 }
 .gallery-thumbnail figcaption a{
@@ -484,9 +484,42 @@ a:hover{
     text-transform: uppercase;
     font-weight: bold;
 }
-.gallery-thumbnail figcaption a:hover, .gallery-thumbnail figcaption a:focus{
-    background-color: rgba(120, 196, 117, 0.5);
+
+/* Style the Image Used to Trigger the Modal */
+#modalImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+#modalImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    /* display: none; Hidden by default */
+    /* position: fixed; /* Stay in place */
+    /* z-index: 1; Sit on top */ */
+    /* padding-top: 100px; Location of the box */
+    /* left: 0;
+    top: 0; */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+/* .gallery-thumbnail figcaption a:hover, .gallery-thumbnail figcaption a:focus{
+    background-color: rgba(120, 196, 117, 0.5);
+} */
+
+/*The styles below are for the gallery page, not home page*/
 
 .gallery-page-thumbnail figure {
     /*position: relative;*/
@@ -647,4 +680,36 @@ a:hover{
 footer{
     text-align: center;
     font-size: 10px;
+}
+
+/********************************************************************
+*                           Reviews Styles
+* Fancy animated construction symbol from codepen
+* https://codepen.io/jexordexan/pen/DnLod?q=under+construction&limit=all&type=type-pens
+********************************************************************/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+
+.review-content{
+  padding-bottom: 200px;
+  background: #EEEEF4;
+  color:#999;
+  font-family:Roboto;
+}
+
+.warning-content h1{
+  font-weight:100;
+  font-size:27pt;
+  color:#E43;
+}
+
+.warning-content p{font-weight:300;}
+
+.warning-content {
+  padding-top: 100px;
+  width:100%;
+  height:300px;
+  text-align:center;
+  margin:0;
+  
+  
 }
